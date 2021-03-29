@@ -11,6 +11,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: var(--transition-delay);
 
     background-color: var(--background-color);
     color: var(--text-color);
