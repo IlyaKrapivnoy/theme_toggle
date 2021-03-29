@@ -11,8 +11,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    transition: var(--transition-delay);
+    overflow: hidden;
 
+    transition: var(--transition-delay);
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -25,6 +26,10 @@ body.dark {
 .title {
     margin: 0;
     margin-bottom: .5rem;
+}
+
+.theme-toggle-button .icon {
+    margin-right: .5em;
 }
 
 .theme-toggle-button {
@@ -47,3 +52,43 @@ body.dark {
 .theme-toggle-button:focus {
     transform: scale(1.1);
 }
+
+.sun-moon-container {
+    --rotation: 0;
+    position: absolute;
+    pointer-events: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    height: 200vmin;
+    transform: rotation(var(--rotation));
+}
+
+.sun,
+.moon {
+    position: absolute;
+    transition: opacity, fill, var(--transition-delay);
+    fill: var(--accent-color)
+}
+
+.sun {
+    top: 5%;
+    opacity: 1;
+}
+
+.dark .sun {
+    opacity: 0;
+}
+
+.moon {
+    bottom: 5%;
+    opacity: 0;
+}
+
+.dark .moon {
+    opacity: 1;
+}
+
