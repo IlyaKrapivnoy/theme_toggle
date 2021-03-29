@@ -1,0 +1,17 @@
+body {
+    --accent-color: orangered;
+    --background-color: white;
+    --text-color: black;
+    --button-text-color: white;
+    --transition-delay: 1s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+body.dark {
+
+}
